@@ -1,2 +1,5 @@
 # willwm.github.io
-GitHub Pages: 
+
+* https://willwm.github.io
+* https://wolffmyren.com
+
