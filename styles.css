@@ -19,6 +19,7 @@ body {
 nav {
     grid-area: 2 / 2 / 3 / 3;
     text-align: center;
+    align-self: center;
 }
 
 nav h1 {
