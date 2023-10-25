@@ -8,6 +8,15 @@
   <link href="https://fonts.googleapis.com/css?family=Merriweather%7CLato" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" type="text/css">
   <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+    crossorigin="anonymous"></script>
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,12 +24,24 @@
     <h1>Will Wolff-Myren</h1>
     <ul>
       <li><a href="https://app.mentra.com/will-wolff-myren-1"
-          aria-label="Link to Will Wolff-Myren's Mentra profile">Mentra - Will Wolff-Myren</a></li>
-      <li><a href="https://github.com/willwm"
-          aria-label="Link to Will Wolff-Myren's GitHub profile">github.com/willwm</a></li>
+          aria-label="Link to Will Wolff-Myren's Mentra profile">Mentra</a></li>
+      <li><a href="https://github.com/willwm" aria-label="Link to Will Wolff-Myren's GitHub profile">GitHub</a></li>
+      <li><a href="https://github.com/willwm/latex-homework-template"
+          aria-label="Link to my LaTeX Homework Template on GitHub">$\underbar{\LaTeX \text{ Homework Template}}$</a></li>
     </ul>
   </nav>
-  <script src="index.js"></script>
+  <script src="scripts/auto-theme.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false }
+        ],
+        throwOnError: false
+      }) 
+    });
+  </script>
 </body>
 
 </html>
