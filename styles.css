@@ -42,6 +42,11 @@ nav ul {
 }
 
 nav li {
+    display: inline-block;
     list-style: none;
-    line-height: 1.75em;
+    margin: 1ex;
+}
+
+nav li:last-of-type {
+    display: block;
 }
