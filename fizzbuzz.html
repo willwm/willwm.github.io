@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,11 @@
     <link rel="stylesheet" href="styles.css" type="text/css">
     <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
 </head>
+
 <body class="wide">
     <nav>
-        <h1>FizzBuzz!</h1>        
-        <p><a href="https://runkit.com/willwm/fizzbuzz">runkit.com/willwm/fizzbuzz</a></p>        
+        <h1>FizzBuzz!</h1>
+        <p><a href="https://runkit.com/willwm/fizzbuzz">runkit.com/willwm/fizzbuzz</a></p>
 
         <code id="runkit">            
         </code>
@@ -22,7 +24,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const fizzbuzz = document.getElementById('fizzbuzz');
-            
+
             const notebook = RunKit.createNotebook({
                 // the parent element for the new notebook
                 element: document.getElementById("runkit"),
@@ -32,29 +34,30 @@
         });
     </script>
 
-<!-- FizzBuzz implementation -->
-<script id="fizzbuzz">
-// Based on FizzBuzz description from: https://en.wikipedia.org/wiki/Fizz_buzz
-function fizzbuzz(val) {
-    let output = '';
-    
-    if (val % 3 === 0) { output += 'Fizz'; }
-    if (val % 5 === 0) { output += 'Buzz'; }
-    
-    if (output === '') { output = `${val}`; }
-    
-    return output;
-}
+    <!-- FizzBuzz implementation -->
+    <script id="fizzbuzz">
+        // Based on FizzBuzz description from: https://en.wikipedia.org/wiki/Fizz_buzz
+        function fizzbuzz(val) {
+            let output = '';
 
-function runner(iterations) {
-    for (i = 1; i <= iterations; i++) {
-        const result = fizzbuzz(i);
-        console.log(`${i}: ${result}`);
-    }
-}
+            if (val % 3 === 0) { output += 'Fizz'; }
+            if (val % 5 === 0) { output += 'Buzz'; }
 
-runner(100);
-</script>
+            if (output === '') { output = `${val}`; }
+
+            return output;
+        }
+
+        function runner(iterations) {
+            for (i = 1; i <= iterations; i++) {
+                const result = fizzbuzz(i);
+                console.log(`${i}: ${result}`);
+            }
+        }
+
+        runner(100);
+    </script>
 
 </body>
+
 </html>
