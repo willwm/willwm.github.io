@@ -54,3 +54,8 @@ nav li {
 nav li:last-of-type {
     display: block;
 }
+
+code#runkit {
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 15px;
+}
