@@ -25,6 +25,10 @@ body {
     grid-template-rows: repeat(3, 1fr);
 }
 
+body.wide {
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
 nav {
     grid-area: 2 / 2 / 3 / 3;
     text-align: center;
